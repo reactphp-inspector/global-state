@@ -1,18 +1,22 @@
 <?php declare(strict_types=1);
 
-namespace WyriHaximus\React\Tests\Inspector;
+namespace ReactInspector\Tests;
 
-use PHPUnit\Framework\TestCase;
-use WyriHaximus\React\Inspector\GlobalState;
+use ReactInspector\GlobalState;
+use WyriHaximus\TestUtilities\TestCase;
 
+/**
+ * @internal
+ */
 final class GlobalStateTest extends TestCase
 {
-    public function setUp()
+    protected function setUp(): void
     {
+        parent::setUp();
         GlobalState::clear();
     }
 
-    public function testBootstrappedState()
+    public function testBootstrappedState(): void
     {
         GlobalState::bootstrap();
         self::assertSame([
@@ -20,7 +24,7 @@ final class GlobalStateTest extends TestCase
         ], GlobalState::get());
     }
 
-    public function testGlobalState()
+    public function testGlobalState(): void
     {
         self::assertSame([], GlobalState::get());
         GlobalState::set('key', 1.0);

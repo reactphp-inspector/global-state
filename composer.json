@@ -1,6 +1,6 @@
 {
-  "name": "wyrihaximus/react-inspector",
-  "description": "Inspect react/* packages for metrics and other insights                               ",
+  "name": "react-inspector/global-state",
+  "description": "☮ Global state singleton",
   "license": "MIT",
   "authors": [
     {
@@ -11,32 +11,22 @@
   ],
   "require": {
     "php": "^7.2",
-    "api-clients/rx": "^2.2",
-    "psr/container": "^1.0",
-    "reactivex/rxphp": "^2.0",
     "wyrihaximus/get-in-packages-composer.jason": "^1.0",
-    "wyrihaximus/ticking-promise": "^1.6"
+    "wyrihaximus/iterator-or-array-to-array": "^1.1"
   },
   "require-dev": {
-    "api-clients/test-utilities": "^5.0"
+    "wyrihaximus/test-utilities": "^1.0"
   },
   "autoload": {
     "psr-4": {
-      "WyriHaximus\\React\\Inspector\\": "src/"
+      "ReactInspector\\": "src/"
     },
     "files": ["src/bootstrap_include.php"]
   },
   "autoload-dev": {
     "psr-4": {
-      "WyriHaximus\\React\\Tests\\Inspector\\": "src/"
+      "ReactInspector\\Tests\\": "src/"
     }
-  },
-  "suggest": {
-    "wyrihaximus/react-inspector-cpu-usage": "Measure the CPU usage of your application and it's child processes",
-    "wyrihaximus/react-inspector-event-loop": "Measure what is going through the event loop",
-    "wyrihaximus/react-inspector-memory-usage": "Message the memory usage of the current PHP process",
-    "wyrihaximus/react-inspector-stream": "Measure what is going through fread/fwrite calls from react/stream",
-    "wyrihaximus/react-inspector-bunny": "Measure what is going through fread/fwrite calls from bunny/bunny"
   },
   "config": {
     "sort-packages": true,
@@ -46,9 +36,6 @@
   },
   "extra": {
     "react-inspector": {
-      "collectors": {
-        "WyriHaximus\\React\\Inspector\\Collector": "src/Collector"
-      },
       "metrics": [
         "inspector.metrics"
       ],

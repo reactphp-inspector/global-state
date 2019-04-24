@@ -1,18 +1,19 @@
 <?php declare(strict_types=1);
 
-namespace WyriHaximus\React\Inspector;
+namespace ReactInspector;
 
 use function WyriHaximus\from_get_in_packages_composer;
+use function WyriHaximus\iteratorOrArrayToArray;
 
 final class GlobalState
 {
-    protected static $state = [];
+    private static $state = [];
 
     public static function bootstrap(): void
     {
-        self::$state = array_fill_keys(
-            array_values(
-                iterator_to_array(
+        self::$state = \array_fill_keys(
+            \array_values(
+                iteratorOrArrayToArray(
                     from_get_in_packages_composer(
                         'extra.react-inspector.metrics'
                     )

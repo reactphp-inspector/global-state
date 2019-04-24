@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace WyriHaximus;
+namespace ReactInspector;
 
 // @codeCoverageIgnoreStart
-if (!defined('WyriHaximus\React\Inspector\BOOTSTRAPPED')) {
+if (!\defined('ReactInspector\BOOTSTRAPPED')) {
     require __DIR__ . '/bootstrap.php';
 }
 // @codeCoverageIgnoreEnd

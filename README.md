@@ -1,23 +1,18 @@
-# ReactPHP Event Loop Inspector
-[![Linux Build Status](https://travis-ci.org/WyriHaximus/reactphp-event-loop-inspector.png)](https://travis-ci.org/WyriHaximus/reactphp-event-loop-inspector)
-[![Latest Stable Version](https://poser.pugx.org/WyriHaximus/react-event-loop-inspector/v/stable.png)](https://packagist.org/packages/WyriHaximus/react-event-loop-inspector)
-[![Total Downloads](https://poser.pugx.org/WyriHaximus/react-event-loop-inspector/downloads.png)](https://packagist.org/packages/WyriHaximus/react-event-loop-inspector)
-[![Code Coverage](https://scrutinizer-ci.com/g/WyriHaximus/reactphp-event-loop-inspector/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/WyriHaximus/reactphp-event-loop-inspector/?branch=master)
-[![License](https://poser.pugx.org/WyriHaximus/react-event-loop-inspector/license.png)](https://packagist.org/packages/wyrihaximus/react-event-loop-inspector)
-[![PHP 7 ready](http://php7ready.timesplinter.ch/WyriHaximus/reactphp-event-loop-inspector/badge.svg)](https://travis-ci.org/WyriHaximus/reactphp-event-loop-inspector)
+# ReactPHP Inspector global state
 
-Inspect what is going on inside the [ReactPHP Event Loop](https://github.com/reactphp/event-loop).
-
-# DO NOT USE THIS IN PRODUCTION UNLESS YOU HAVE A GOOD REASON TO!
-
-It will hook into all events and cause overhead on all event calls!
+[![Linux Build Status](https://travis-ci.org/reactphp-inspector/global-state.png)](https://travis-ci.org/reactphp-inspector/global-state)
+[![Latest Stable Version](https://poser.pugx.org/react-inspector/global-state/v/stable.png)](https://packagist.org/packages/react-inspector/global-state)
+[![Total Downloads](https://poser.pugx.org/react-inspector/global-state/downloads.png)](https://packagist.org/packages/react-inspector/global-state)
+[![Code Coverage](https://scrutinizer-ci.com/g/reactphp-inspector/global-state/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/reactphp-inspector/global-state/?branch=master)
+[![License](https://poser.pugx.org/react-inspector/global-state/license.png)](https://packagist.org/packages/react-inspector/global-state)
+[![PHP 7 ready](http://php7ready.timesplinter.ch/reactphp-inspector/global-state/badge.svg)](https://travis-ci.org/reactphp-inspector/global-state)
 
 ### Installation ###
 
 To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `^`.
 
 ```
-composer require wyrihaximus/react-event-loop-inspector 
+composer require react-inspector/global-state 
 ```
 
 ## Contributing ##
@@ -26,7 +21,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## License ##
 
-Copyright 2017 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
+Copyright 2019 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
