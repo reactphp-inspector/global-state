@@ -3,16 +3,14 @@
 [![Linux Build Status](https://travis-ci.org/reactphp-inspector/global-state.png)](https://travis-ci.org/reactphp-inspector/global-state)
 [![Latest Stable Version](https://poser.pugx.org/react-inspector/global-state/v/stable.png)](https://packagist.org/packages/react-inspector/global-state)
 [![Total Downloads](https://poser.pugx.org/react-inspector/global-state/downloads.png)](https://packagist.org/packages/react-inspector/global-state)
-[![Code Coverage](https://scrutinizer-ci.com/g/reactphp-inspector/global-state/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/reactphp-inspector/global-state/?branch=master)
 [![License](https://poser.pugx.org/react-inspector/global-state/license.png)](https://packagist.org/packages/react-inspector/global-state)
-[![PHP 7 ready](http://php7ready.timesplinter.ch/reactphp-inspector/global-state/badge.svg)](https://travis-ci.org/reactphp-inspector/global-state)
 
 ### Installation ###
 
 To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `^`.
 
 ```
-composer require react-inspector/global-state 
+composer require react-inspector/global-state
 ```
 
 ## Contributing ##
@@ -21,7 +19,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## License ##
 
-Copyright 2019 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
+Copyright 2024 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation

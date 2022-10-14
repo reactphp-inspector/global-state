@@ -1,45 +1,38 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace ReactInspector\Tests;
 
 use ReactInspector\GlobalState;
+use WyriHaximus\Metrics\Configuration;
+use WyriHaximus\Metrics\InMemory\Registry;
 use WyriHaximus\TestUtilities\TestCase;
 
-/**
- * @internal
- */
 final class GlobalStateTest extends TestCase
 {
-    protected function setUp(): void
+    /** @test */
+    public function subscribeAndRegister(): void
     {
-        parent::setUp();
-        GlobalState::clear();
-    }
+        $count    = 0;
+        $registry = new Registry(Configuration::create());
 
-    public function testBootstrappedState(): void
-    {
-        GlobalState::bootstrap();
-        self::assertSame([
-            'inspector.metrics' => 0.0,
-        ], GlobalState::get());
-    }
+        for ($i = 0; $i < 13; $i++) {
+            GlobalState::subscribe(static function (\WyriHaximus\Metrics\Registry $passRegistry) use ($registry, &$count): void {
+                self::assertSame($registry, $passRegistry);
+                $count++;
+            });
+        }
 
-    public function testGlobalState(): void
-    {
-        self::assertSame([], GlobalState::get());
-        GlobalState::set('key', 1.0);
-        self::assertSame(['key' => 1.0], GlobalState::get());
-        GlobalState::incr('key');
-        self::assertSame(['key' => 2.0], GlobalState::get());
-        GlobalState::incr('key', 3.0);
-        self::assertSame(['key' => 5.0], GlobalState::get());
-        GlobalState::reset();
-        self::assertSame(['key' => 0.0], GlobalState::get());
-        GlobalState::clear();
-        self::assertSame([], GlobalState::get());
-        GlobalState::incr('key', 3.0);
-        self::assertSame(['key' => 3.0], GlobalState::get());
-        GlobalState::decr('key');
-        self::assertSame(['key' => 2.0], GlobalState::get());
+        GlobalState::register($registry);
+
+        for ($i = 0; $i < 13; $i++) {
+            GlobalState::subscribe(static function (\WyriHaximus\Metrics\Registry $passRegistry) use ($registry, &$count): void {
+                self::assertSame($registry, $passRegistry);
+                $count++;
+            });
+        }
+
+        self::assertSame(26, $count);
     }
 }
