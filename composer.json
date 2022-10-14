@@ -10,18 +10,13 @@
     }
   ],
   "require": {
-    "php": "^7.2",
-    "wyrihaximus/get-in-packages-composer.jason": "^1.0",
-    "wyrihaximus/iterator-or-array-to-array": "^1.1"
-  },
-  "require-dev": {
-    "wyrihaximus/test-utilities": "^1.0"
+    "php": "^8 || ^7.4",
+    "wyrihaximus/metrics": "^1.1"
   },
   "autoload": {
     "psr-4": {
       "ReactInspector\\": "src/"
-    },
-    "files": ["src/bootstrap_include.php"]
+    }
   },
   "autoload-dev": {
     "psr-4": {
@@ -31,7 +26,11 @@
   "config": {
     "sort-packages": true,
     "platform": {
-      "php": "7.2"
+      "php": "7.4.99"
+    },
+    "allow-plugins": {
+      "ocramius/package-versions": true,
+      "localheinz/composer-normalize": true
     }
   },
   "extra": {
